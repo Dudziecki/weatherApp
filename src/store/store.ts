@@ -1,14 +1,12 @@
-import {combineReducers, configureStore} from '@reduxjs/toolkit'
+import { configureStore} from '@reduxjs/toolkit'
+import {weatherReducer} from "../weatherSlice.ts";
 
 
 // объединение reducer'ов с помощью combineReducers
-const rootReducer = combineReducers({
-
-})
 
 // создание store
 export const store = configureStore({
-    reducer: rootReducer,
+    reducer: weatherReducer,
 })
 
 // автоматическое определение типа всего объекта состояния
